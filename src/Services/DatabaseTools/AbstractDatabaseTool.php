@@ -265,4 +265,9 @@ abstract class AbstractDatabaseTool
     }
 
     abstract protected function getPlatformName(): string;
+
+    public static function clearMetadata(): void
+    {
+        self::$cachedMetadatas = [];
+    }
 }
